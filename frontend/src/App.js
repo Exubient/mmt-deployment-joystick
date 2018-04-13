@@ -37,7 +37,9 @@ class App extends Component {
     return (
       <Fragment>
         <h1>iStick</h1>
-        <div className="joystick" id="joystick" />
+        <div className="joystick" id="joystick">
+          <div className="push-button-" />
+        </div>
         <p>MMT-iStick</p>
       </Fragment>
     );
