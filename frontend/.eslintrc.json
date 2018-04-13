@@ -1,9 +1,0 @@
-{
-  "extends": "airbnb",
-  "rules": {
-    "func-names": ["error", "never"],
-    "no-console": 0,
-    "react/jsx-filename-extension": 0,
-    "react/prefer-stateless-function": 0
-  }
-}
