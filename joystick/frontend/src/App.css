@@ -31,18 +31,63 @@
   width: 50px;
 } */
 
-.push-button {
-  background: radial-gradient(rgb(175, 0, 0), rgb(200, 0, 0));
+.push-button-a {
+  background: radial-gradient(#094B9B, #094B9B);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 2px rgb(250, 55, 55),
-    inset 2px 3px 0 0 rgb(255, 255, 255), inset -2px -3px 0 0 rgb(255, 255, 255),
-    0 0 0 5px rgb(150, 0, 0), -1px -1px 0 5px rgb(225, 0, 0);
+  box-shadow: inset 0 0 0 2px #094B9B,
+    inset 2px 3px 0 0 rgb(255, 255, 255), inset -2px -3px 0 0 #094B9B,
+    0 0 0 5px #094B9B, -1px -1px 0 5px #094B9B;
   content: "";
   display: block;
   height: 50px;
   left: 400px;
   position: absolute;
-  top: 220px;
+  top: 30px;
+  width: 50px;
+}
+
+.push-button-b {
+  background: radial-gradient(#15936D, #15936D);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px #15936D,
+    inset 2px 3px 0 0 rgb(255, 255, 255), inset -2px -3px 0 0 rgb(255, 255, 255),
+    0 0 0 5px #15936D, -1px -1px 0 5px #15936D;
+  content: "";
+  display: block;
+  height: 50px;
+  left: 300px;
+  position: absolute;
+  top: 130px;
+  width: 50px;
+}
+
+.push-button-c {
+  background: radial-gradient(#D9344A, #D9344A);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px #D9344A,
+    inset 2px 3px 0 0 rgb(255, 255, 255), inset -2px -3px 0 0 rgb(255, 255, 255),
+    0 0 0 5px #D9344A, -1px -1px 0 5px #D9344A;
+  content: "";
+  display: block;
+  height: 50px;
+  left: 400px;
+  position: absolute;
+  bottom: 30px;
+  width: 50px;
+}
+
+.push-button-d {
+  background: radial-gradient(#FEBD55, #FEBD55);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px #FEBD55,
+    inset 2px 3px 0 0 rgb(255, 255, 255), inset -2px -3px 0 0 rgb(255, 255, 255),
+    0 0 0 5px #FEBD55, -1px -1px 0 5px #FEBD55;
+  content: "";
+  display: block;
+  height: 50px;
+  left: 495px;
+  position: absolute;
+  top: 130px;
   width: 50px;
 }
 
@@ -64,11 +109,11 @@
   background: radial-gradient(
     ellipse at 32px 28px,
     rgb(255, 255, 255) 10%,
-    rgb(225, 55, 55) 11%,
-    rgb(200, 0, 0) 100%
+    #424848 11%,
+    #424848 100%
   );
   border-radius: 50%;
-  box-shadow: inset 3px 5px 25px rgba(255, 0, 0, 0.5),
+  box-shadow: inset 3px 5px 25px #424848,
     inset 3px 5px 35px rgba(255, 205, 205, 0.75),
     inset 0 0 5px rgba(255, 205, 205, 0.75),
     inset -10px -15px 45px rgba(0, 0, 0, 0.25),
