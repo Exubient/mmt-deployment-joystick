@@ -9,7 +9,7 @@
   position: relative;
   width: 600px;
 }
-/* 
+
 .joystick:before {
   background: radial-gradient(rgb(175, 0, 0), rgb(200, 0, 0));
   border-radius: 50%;
@@ -29,14 +29,13 @@
   position: absolute;
   top: 220px;
   width: 50px;
-} */
+}
 
-.push-button-a {
-  background: radial-gradient(#094B9B, #094B9B);
+.push-button {
+  background: radial-gradient(#094b9b, #094b9b);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 2px #094B9B,
-    inset 2px 3px 0 0 rgb(255, 255, 255), inset -2px -3px 0 0 #094B9B,
-    0 0 0 5px #094B9B, -1px -1px 0 5px #094B9B;
+  box-shadow: inset 0 0 0 2px #094b9b, inset 2px 3px 0 0 rgb(255, 255, 255),
+    inset -2px -3px 0 0 #094b9b, 0 0 0 5px #094b9b, -1px -1px 0 5px #094b9b;
   content: "";
   display: block;
   height: 50px;
@@ -46,12 +45,32 @@
   width: 50px;
 }
 
-.push-button-b {
-  background: radial-gradient(#15936D, #15936D);
+.push-button-a {
+  background: radial-gradient(#094b9b, #094b9b);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 2px #15936D,
-    inset 2px 3px 0 0 rgb(255, 255, 255), inset -2px -3px 0 0 rgb(255, 255, 255),
-    0 0 0 5px #15936D, -1px -1px 0 5px #15936D;
+  box-shadow: inset 0 0 0 2px #094b9b, inset 2px 3px 0 0 rgb(255, 255, 255),
+    inset -2px -3px 0 0 #094b9b, 0 0 0 5px #094b9b, -1px -1px 0 5px #094b9b;
+  content: "";
+  display: block;
+  height: 50px;
+  left: 400px;
+  position: absolute;
+  top: 30px;
+  width: 50px;
+}
+
+.push-button-a.pressed {
+  background: radial-gradient(#094b9b, #094b9b);
+  box-shadow: inset 1px 1px 4px 1px rgba(0, 0, 0, 0.85), 0 0 0 5px #094b9b,
+    inset -1px -1px 0 0 #094b9b, -1px -1px 0 5px #094b9b;
+}
+
+.push-button-b {
+  background: radial-gradient(#15936d, #15936d);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px #15936d, inset 2px 3px 0 0 rgb(255, 255, 255),
+    inset -2px -3px 0 0 rgb(255, 255, 255), 0 0 0 5px #15936d,
+    -1px -1px 0 5px #15936d;
   content: "";
   display: block;
   height: 50px;
@@ -61,12 +80,18 @@
   width: 50px;
 }
 
+.push-button-b.pressed {
+  background: radial-gradient(#15936d, #15936d);
+  box-shadow: inset 1px 1px 4px 1px rgba(0, 0, 0, 0.85), 0 0 0 5px #15936d,
+    inset -1px -1px 0 0 #15936d, -1px -1px 0 5px #15936d;
+}
+
 .push-button-c {
-  background: radial-gradient(#D9344A, #D9344A);
+  background: radial-gradient(#d9344a, #d9344a);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 2px #D9344A,
-    inset 2px 3px 0 0 rgb(255, 255, 255), inset -2px -3px 0 0 rgb(255, 255, 255),
-    0 0 0 5px #D9344A, -1px -1px 0 5px #D9344A;
+  box-shadow: inset 0 0 0 2px #d9344a, inset 2px 3px 0 0 rgb(255, 255, 255),
+    inset -2px -3px 0 0 rgb(255, 255, 255), 0 0 0 5px #d9344a,
+    -1px -1px 0 5px #d9344a;
   content: "";
   display: block;
   height: 50px;
@@ -76,12 +101,18 @@
   width: 50px;
 }
 
+.push-button-c.pressed {
+  background: radial-gradient(#d9344a, #d9344a);
+  box-shadow: inset 1px 1px 4px 1px rgba(0, 0, 0, 0.85), 0 0 0 5px #d9344a,
+    inset -1px -1px 0 0 #d9344a, -1px -1px 0 5px #d9344a;
+}
+
 .push-button-d {
-  background: radial-gradient(#FEBD55, #FEBD55);
+  background: radial-gradient(#febd55, #febd55);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 2px #FEBD55,
-    inset 2px 3px 0 0 rgb(255, 255, 255), inset -2px -3px 0 0 rgb(255, 255, 255),
-    0 0 0 5px #FEBD55, -1px -1px 0 5px #FEBD55;
+  box-shadow: inset 0 0 0 2px #febd55, inset 2px 3px 0 0 rgb(255, 255, 255),
+    inset -2px -3px 0 0 rgb(255, 255, 255), 0 0 0 5px #febd55,
+    -1px -1px 0 5px #febd55;
   content: "";
   display: block;
   height: 50px;
@@ -91,7 +122,13 @@
   width: 50px;
 }
 
-.joystick.pressed:before {
+.push-button-d.pressed {
+  background: radial-gradient(#febd55, #febd55);
+  box-shadow: inset 1px 1px 4px 1px rgba(0, 0, 0, 0.85), 0 0 0 5px #febd55,
+    inset -1px -1px 0 0 #febd55, -1px -1px 0 5px #febd55;
+}
+
+/* .joystick.pressed:before {
   background: radial-gradient(rgb(125, 0, 0), rgb(150, 0, 0));
   box-shadow: inset -10px -15px 45px rgba(255, 185, 185, 0.25),
     -105px -105px 50px 10px rgba(10, 10, 10, 0.65),
@@ -103,7 +140,7 @@
     inset 1px 1px 4px 1px rgba(0, 0, 0, 0.85), 0 0 0 5px rgb(150, 0, 0),
     inset -1px -1px 0 0 rgba(250, 100, 100, 0.75),
     -1px -1px 0 5px rgb(225, 0, 0);
-}
+} */
 
 .joystick:after {
   background: radial-gradient(

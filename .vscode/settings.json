@@ -1,0 +1,4 @@
+{
+  "prettier.eslintIntegration": true,
+  "eslint.workingDirectories": ["joystick/frontend"]
+}

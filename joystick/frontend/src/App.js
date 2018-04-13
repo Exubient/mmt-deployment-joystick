@@ -3,6 +3,16 @@ import "./App.css";
 
 class App extends Component {
   componentDidMount() {
+    const KEYS = {};
+    KEYS[32] = "pressed";
+    KEYS[37] = "left";
+    KEYS[38] = "up";
+    KEYS[39] = "right";
+    KEYS[40] = "down";
+
+    const joystick = document.getElementById("joystick");
+    const keysDown = {};
+
     function updateJoystickClass() {
       const classNames = ["joystick"];
       Object.keys(keysDown).forEach(key => {
@@ -11,14 +21,6 @@ class App extends Component {
       joystick.className = classNames.join(" ");
     }
 
-    const KEYS = [];
-    KEYS[32] = "pressed";
-    KEYS[37] = "left";
-    KEYS[38] = "up";
-    KEYS[39] = "right";
-    KEYS[40] = "down";
-    const joystick = document.getElementById("joystick");
-    const keysDown = {};
     document.addEventListener("keydown", e => {
       if (!KEYS[e.which]) return;
       e.preventDefault();
