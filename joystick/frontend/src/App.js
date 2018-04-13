@@ -1,52 +1,36 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      stick: 'joystick up right',
+      a: false,
+      b: false,
+      c: true,
+      d: false,
+    };
+  }
+
   componentDidMount() {
-    const KEYS = {};
-    KEYS[32] = 'pressed';
-    KEYS[37] = 'left';
-    KEYS[38] = 'up';
-    KEYS[39] = 'right';
-    KEYS[40] = 'down';
-
-    const joystick = document.getElementById('joystick');
-    const keysDown = {};
-
-    function updateJoystickClass() {
-      const classNames = ['joystick'];
-      Object.keys(keysDown).forEach((key) => {
-        if (keysDown[key]) classNames.push(key);
-      });
-      joystick.className = classNames.join(' ');
-    }
-
-    document.addEventListener('keydown', (e) => {
-      if (!KEYS[e.which]) return;
-      e.preventDefault();
-      keysDown[KEYS[e.which]] = true;
-      updateJoystickClass();
-    });
-    document.addEventListener('keyup', (e) => {
-      if (!KEYS[e.which]) return;
-      e.preventDefault();
-      keysDown[KEYS[e.which]] = false;
-      updateJoystickClass();
-    });
   }
 
   render() {
+    const {
+      stick, a, b, c, d,
+    } = this.state;
     return (
-      <Fragment>
+      <div className="container">
         <h1>iStick</h1>
-        <div className="joystick" id="joystick">
-          <div className="push-button-a" />
-          <div className="push-button-b" />
-          <div className="push-button-c" />
-          <div className="push-button-d" />
+        <div className={stick} id="joystick">
+          <div className={a ? 'push-button-a pressed' : 'push-button-a'} />
+          <div className={b ? 'push-button-b pressed' : 'push-button-b'} />
+          <div className={c ? 'push-button-c pressed' : 'push-button-c'} />
+          <div className={d ? 'push-button-d pressed' : 'push-button-d'} />
         </div>
         <p>MMT-iStick</p>
-      </Fragment>
+      </div>
     );
   }
 }
