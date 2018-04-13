@@ -16,5 +16,6 @@ def index(request):
     qs={"body":ls[0].body, "key":ls[0].key}
 
     return render(request, "main.html", {
-    	"ls":json.dumps(qs),
+    	"v1":ls[0].body,
+    	"v2":ls[0].key,
     })
