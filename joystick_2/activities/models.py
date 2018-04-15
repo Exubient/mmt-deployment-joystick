@@ -13,4 +13,7 @@ class Note(models.Model):
     key = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.body
+
 
